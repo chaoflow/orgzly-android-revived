@@ -30,8 +30,12 @@
         ANDROID_HOME = "${androidComposition.androidsdk}/libexec/android-sdk";
 
         buildInputs = with pkgs; [
+          google-java-format
           gradle_8
-          jdk23_headless
+          jdk21_headless  # match with kotlin's jdk
+          kotlin
+          kotlin-language-server
+          ktlint
         ];
       };
     };
